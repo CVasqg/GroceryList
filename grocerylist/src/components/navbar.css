@@ -1,0 +1,27 @@
+.gl-navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 1rem;
+	background: #B1CB1D;
+	color: #A25701;
+}
+.gl-brand {
+	font-weight: 700;
+	font-family: 'Miniver', Georgia, 'Times New Roman', Times, serif;
+	font-size: 1.25rem;
+}
+.gl-links {
+	display: flex;
+	gap: 1rem;
+}
+.gl-link {
+	color: #A25701;
+	text-decoration: none;
+	padding: 0.25rem 0.5rem;
+	font-family: 'Itim', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+.gl-link:hover, .gl-link.active {
+	background: rgba(255,255,255,0.12);
+	border-radius: 4px;
+}

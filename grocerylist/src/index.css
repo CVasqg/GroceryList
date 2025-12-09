@@ -7,6 +7,51 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* App background image */
+body {
+  background-color: #f4f7f6;
+  background-image: url('./assets/background.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+
+/* Local fonts */
+@font-face {
+  font-family: 'Itim';
+  src: url('./assets/Itim-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Miniver';
+  src: url('./assets/Miniver-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Itim for all page titles (h1, h2) */
+h1, h2 {
+  font-family: 'Itim', Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Inter for About page descriptions */
+section p {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
