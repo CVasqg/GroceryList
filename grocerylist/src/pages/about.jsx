@@ -15,8 +15,6 @@ export default function About() {
 		<section className="about-page">
 			<div className="about-hero">
 				<h1 className="page-title">Create Your Balanced Grocery List</h1>
-			</div>
-			<div className="hero-cta">
 				<button onClick={() => navigate('/create')}>Create List</button>
 			</div>
 
@@ -28,7 +26,7 @@ export default function About() {
 					</p>
 				</div>
 			</div>
-			
+
 			<div className="about-block">
 				<div className="about-text">
 					<h2>The Healthy Eating plate</h2>
@@ -53,29 +51,29 @@ export default function About() {
 				</div>
 			</div>
 
-			{/* Made by section */}
-			<div className="made-by">
-				<h3>Made by</h3>
-				<div className="creators">
-					<div className="creator">
-						<img className="avatar" src={avatar1} alt="creator 1" />
-						<div className="creator-name">Anita Demirci</div>
-					</div>
-					<div className="creator">
-						<img className="avatar" src={avatar2} alt="creator 2" />
-						<div className="creator-name">Citlally Vasquez</div>
-					</div>
-					<div className="creator">
-						<img className="avatar" src={avatar3} alt="creator 3" />
-						<div className="creator-name">Belle Lopez</div>
-					</div>
-					<div className="creator">
-						<img className="avatar" src={avatar4} alt="creator 4" />
-						<div className="creator-name">Nathan Heidari</div>
+			<footer className="about-footer">
+				<div className="made-by">
+					<h3>Made by</h3>
+					<div className="creators">
+						<div className="creator">
+							<img className="avatar" src={avatar1} alt="creator 1" />
+							<div className="creator-name">Anita Demirci</div>
+						</div>
+						<div className="creator">
+							<img className="avatar" src={avatar2} alt="creator 2" />
+							<div className="creator-name">Citlally Vasquez</div>
+						</div>
+						<div className="creator">
+							<img className="avatar" src={avatar3} alt="creator 3" />
+							<div className="creator-name">Belle Lopez</div>
+						</div>
+						<div className="creator">
+							<img className="avatar" src={avatar4} alt="creator 4" />
+							<div className="creator-name">Nathan Heidari</div>
+						</div>
 					</div>
 				</div>
-			</div>
-
+			</footer>
 		</section>
 	);
 }

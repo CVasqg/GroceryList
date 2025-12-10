@@ -35,11 +35,11 @@ export default function GroupPage() {
 
   return (
     <section>
-      <h2 style={{ textTransform: 'capitalize' }}>{groupId.replace(/([A-Z])/g, ' $1')}</h2>
       <p>
         <Link to="/create">Back to groups</Link>
       </p>
       <div className="group-list">
+        <h2 style={{ textTransform: 'capitalize', marginTop: 0 }}>{groupId.replace(/([A-Z])/g, ' $1')}</h2>
         <ul className="group-items">
           {combined.map(item => {
             const isSelected = selected[groupId] && selected[groupId].includes(item);
@@ -57,9 +57,9 @@ export default function GroupPage() {
             );
           })}
         </ul>
-      </div>
-      <div style={{ marginTop: '1rem' }}>
-        <button onClick={handleAddCustom}>Add another item</button>
+        <div style={{ marginTop: '1rem', textAlign: 'right' }}>
+          <button onClick={handleAddCustom}>Add another item</button>
+        </div>
       </div>
     </section>
   );

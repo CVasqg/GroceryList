@@ -1,0 +1,147 @@
+/* Background and layout */
+.viewlist-page {
+	min-height: 100vh;
+	/* Remove background pattern, keep only color and font */
+	background: none;
+	font-family: 'Itim', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	color: #A25701;
+	padding: 2rem 0 0 0;
+}
+
+.viewlist-nav {
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 2.5rem;
+	margin-bottom: 1.5rem;
+}
+
+.back-btn {
+	background: #A25701;
+	color: #fff;
+	border: none;
+	border-radius: 10px;
+	font-size: 1.1rem;
+	padding: 0.7rem 1.5rem;
+	font-family: inherit;
+	font-weight: 600;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(162, 87, 1, 0.08);
+	transition: background 0.2s;
+}
+.back-btn:hover {
+	background: #FFA424;
+	color: #A25701;
+}
+
+.viewlist-content {
+	display: flex;
+	gap: 2.5rem;
+	justify-content: center;
+	align-items: flex-start;
+	margin-bottom: 2.5rem;
+	flex-direction: row;
+}
+@media (max-width: 900px) {
+	.viewlist-content {
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+	}
+}
+
+.list-box {
+	background: #FFA424;
+	border: 2px solid #A25701;
+	border-radius: 16px;
+	box-shadow: 0 4px 24px rgba(162, 87, 1, 0.08);
+	padding: 1.5rem 2rem;
+	min-width: 280px;
+	max-width: 340px;
+	min-height: 520px;
+	flex: 0 0 340px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.plate-box {
+	background: #FFA424;
+	border: 2px solid #A25701;
+	border-radius: 16px;
+	box-shadow: 0 4px 24px rgba(162, 87, 1, 0.08);
+	padding: 1.5rem 2rem;
+	min-width: 280px;
+	max-width: 340px;
+	margin-bottom: 1.5rem;
+}
+
+.diagram-section {
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Stack plate and diagram vertically */
+.viewlist-side {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	flex: 0 0 340px;
+}
+
+.list-title, .plate-title {
+	font-size: 1.6rem;
+	margin-bottom: 1.2rem;
+	text-align: center;
+	font-family: inherit;
+}
+.item-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.item-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.7rem 0.5rem;
+	border-bottom: 1px solid #f5c16c;
+	font-size: 1.15rem;
+}
+.item-row:last-child {
+	border-bottom: none;
+}
+.item-name {
+	color: #A25701;
+}
+.item-count {
+	color: #763f00;
+	font-weight: 600;
+}
+.empty-msg {
+	text-align: center;
+	color: #A25701;
+	font-size: 1.1rem;
+}
+.percent-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.percent-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.6rem 0.5rem;
+	border-bottom: 1px solid #f5c16c;
+	font-size: 1.1rem;
+}
+.percent-row:last-child {
+	border-bottom: none;
+}
+.percent-group {
+	font-weight: 600;
+	color: #A25701;
+}
+.percent-value {
+	color: #763f00;
+}

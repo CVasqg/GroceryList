@@ -9,7 +9,7 @@
 }
 
 .about-hero {
-  max-width: 600px;
+  max-width: 900px;
   margin: 1rem auto; /* center horizontally */
   background: #FFA424;
   color: #A25701;
@@ -85,7 +85,7 @@
   margin-top: 0.75rem;
 }
 
-.hero-cta button {
+.about-hero button {
   font-family: 'Itim', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: #A25701;
   border: 2px solid #763f00;
@@ -165,4 +165,28 @@
 @media (max-width: 540px) {
   .creators { gap: 0.75rem; }
   .avatar { width: 56px; height: 56px; }
+}
+
+/* Remove beige container */
+.about-main-container {
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  max-width: none;
+}
+
+/* Footer styles */
+.about-footer {
+  background: #FFA424;
+  border-top: 2px solid #A25701;
+  border-radius: 0;
+  box-shadow: 0 -2px 16px rgba(162, 87, 1, 0.07);
+  padding: 0.75rem 0 1rem 0;
+  margin-top: 6rem;
+  width: 100vw;
+  min-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }
