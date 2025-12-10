@@ -5,11 +5,22 @@
 	padding: 0.5rem 1rem;
 	background: #B1CB1D;
 	color: #A25701;
+	border-bottom: 2px solid #8b9f18;
 }
 .gl-brand {
 	font-weight: 700;
 	font-family: 'Miniver', Georgia, 'Times New Roman', Times, serif;
-	font-size: 1.25rem;
+	font-size: 1.7rem;
+}
+.gl-left {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.gl-logo img {
+	height: 44px;
+	width: auto;
+	display: block;
 }
 .gl-links {
 	display: flex;
@@ -19,6 +30,7 @@
 	color: #A25701;
 	text-decoration: none;
 	padding: 0.25rem 0.5rem;
+	font-size: 1.5rem;
 	font-family: 'Itim', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 .gl-link:hover, .gl-link.active {

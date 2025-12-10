@@ -1,18 +1,81 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import healthyPlate from '../assets/healthyplate.png';
+import healthyPyramid from '../assets/healthypyramid.svg';
+import './about.css';
+import avatar1 from '../assets/raspberry.png';
+import avatar2 from '../assets/cherry.png';
+import avatar3 from '../assets/mango.png';
+import avatar4 from '../assets/passionfruit.png';
 
 export default function About() {
+	const navigate = useNavigate();
+
 	return (
-		<section>
-			<h1>About the Healthy Grocery Builder</h1>
-			<p>
-				This small app helps you build a healthy grocery list based on the Healthy Eating Plate
-				and Pyramid. Use the Create List page to pick items from food groups, add your own items,
-				and then view your final list and the percentage breakdown by food group on the View List page.
-			</p>
-			<p>
-				The app is intentionally simple: each food group page contains a curated list of common,
-				healthy choices and you can add custom items as needed.
-			</p>
+		<section className="about-page">
+			<div className="about-hero">
+				<h1 className="page-title">Create Your Balanced Grocery List</h1>
+			</div>
+			<div className="hero-cta">
+				<button onClick={() => navigate('/create')}>Create List</button>
+			</div>
+
+			<div className="about-block">
+				<div className="about-text">
+					<h2>Why?</h2>
+					<p>
+						Many people struggle with eating well due to an overwhelming food market saturated with highly processed options and misleading “healthy” labels. This application helps users with limited nutrition knowledge quickly create balanced grocery lists rooted in science rather than trends.
+					</p>
+				</div>
+			</div>
+			
+			<div className="about-block">
+				<div className="about-text">
+					<h2>The Healthy Eating plate</h2>
+					<p>
+						The Healthy Eating Plate is a visual guide for creating balanced meals. It encourages the use of healthy oils, drinking mainly water, limiting sugary drinks, and keeping dairy intake moderate. The plate includes a reminder to stay physically active as part of maintaining overall health.
+					</p>
+				</div>
+				<div className="about-media">
+					<img src={healthyPlate} alt="Harvard Healthy Eating Plate" />
+				</div>
+			</div>
+
+			<div className="about-block">
+				<div className="about-text">
+					<h2>The Healthy Eating Pyramid</h2>
+					<p>
+						The Healthy Eating Pyramid is a long-term guide that organizes foods into levels based on how often they should be eaten. Its base highlights daily physical activity and weight management as the foundation for health. The pyramid helps illustrate balanced eating patterns over time.
+					</p>
+				</div>
+				<div className="about-media">
+					<img src={healthyPyramid} alt="Harvard Healthy Eating Pyramid" />
+				</div>
+			</div>
+
+			{/* Made by section */}
+			<div className="made-by">
+				<h3>Made by</h3>
+				<div className="creators">
+					<div className="creator">
+						<img className="avatar" src={avatar1} alt="creator 1" />
+						<div className="creator-name">Anita Demirci</div>
+					</div>
+					<div className="creator">
+						<img className="avatar" src={avatar2} alt="creator 2" />
+						<div className="creator-name">Citlally Vasquez</div>
+					</div>
+					<div className="creator">
+						<img className="avatar" src={avatar3} alt="creator 3" />
+						<div className="creator-name">Belle Lopez</div>
+					</div>
+					<div className="creator">
+						<img className="avatar" src={avatar4} alt="creator 4" />
+						<div className="creator-name">Nathan Heidari</div>
+					</div>
+				</div>
+			</div>
+
 		</section>
 	);
 }
