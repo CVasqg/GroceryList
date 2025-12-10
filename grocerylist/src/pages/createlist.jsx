@@ -4,10 +4,9 @@ import { useNavigate } from 'react-router-dom';
 const GROUPS = [
 	{ id: 'vegetables', name: 'Vegetables' },
 	{ id: 'fruits', name: 'Fruits' },
-	{ id: 'wholegrains', name: 'Whole Grains' },
+	{ id: 'wholegrains', name: 'Grains' },
 	{ id: 'proteins', name: 'Proteins' },
-	{ id: 'dairy', name: 'Dairy / Alternatives' },
-	{ id: 'oils', name: 'Oils & Nuts' },
+	{ id: 'dairy', name: 'Dairy' },
 ];
 
 export default function CreateList() {

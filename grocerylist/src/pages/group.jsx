@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { GroceryContext } from '../App';
+import './group.css';
 
 const HARD_CODED = {
   vegetables: ['Broccoli', 'Spinach', 'Carrots', 'Kale'],
@@ -38,19 +39,25 @@ export default function GroupPage() {
       <p>
         <Link to="/create">Back to groups</Link>
       </p>
-      <ul>
-        {combined.map(item => {
-          const isSelected = selected[groupId] && selected[groupId].includes(item);
-          return (
-            <li key={item} style={{ marginBottom: '0.5rem' }}>
-              <label>
-                <input type="checkbox" checked={!!isSelected} onChange={() => toggleSelect(item)} />{' '}
-                {item}
-              </label>
-            </li>
-          );
-        })}
-      </ul>
+      <div className="group-list">
+        <ul className="group-items">
+          {combined.map(item => {
+            const isSelected = selected[groupId] && selected[groupId].includes(item);
+            return (
+              <li key={item} className="group-item">
+                <button
+                  type="button"
+                  className={`select-dot ${isSelected ? 'selected' : ''}`}
+                  aria-pressed={!!isSelected}
+                  onClick={() => toggleSelect(item)}
+                  title={isSelected ? `Remove ${item}` : `Add ${item}`}
+                />
+                <span className="item-label">{item}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
       <div style={{ marginTop: '1rem' }}>
         <button onClick={handleAddCustom}>Add another item</button>
       </div>

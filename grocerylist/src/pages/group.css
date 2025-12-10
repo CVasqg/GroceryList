@@ -1,0 +1,84 @@
+/* Styles for group pages: orange box around list, Itim font for items */
+.group-list {
+  width: 70%;
+  margin: 1rem auto;
+  background: #FFA424;
+  border: 2px solid #A25701;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.group-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.group-item {
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+
+.select-dot {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #A25701;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex: 0 0 28px; /* ensure flex-basis matches width/height to avoid stretching */
+  min-width: 28px;
+  min-height: 28px;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 120ms ease;
+}
+.select-dot:hover { transform: scale(1.05); }
+.select-dot:focus {
+  outline: 3px solid rgba(162,87,1,0.14);
+  outline-offset: 2px;
+}
+.select-dot.selected {
+  background-color: #A25701; /* brown when selected */
+  border-color: #A25701;
+}
+.group-item .item-label { margin-left: 0.5rem; display: inline-block; vertical-align: middle; line-height: 1; transform: translateY(2px); }
+
+/* Ensure the dot stays vertically centered even if the label font-size is large */
+.select-dot { align-self: center; }
+
+.item-label {
+  font-family: 'Itim', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #A25701; /* brown */
+  font-size: 1.7rem;
+}
+
+.group-list button {
+  margin-top: 1rem;
+  background: #A25701;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.group-list .select-dot {
+  background-color: #ffffff;
+  border: 2px solid #A25701; 
+}
+.group-list .select-dot.selected {
+  background-color: #A25701;
+  border-color: #A25701;
+}
+
+@media (max-width: 640px) {
+  .group-list { padding: 0.75rem; }
+  .item-label { font-size: 1rem; }
+}
