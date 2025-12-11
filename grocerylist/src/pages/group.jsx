@@ -1,28 +1,37 @@
 import React, { useState, useContext } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { GroceryContext } from '../App';
+import AddItem from '../components/additem';
 import './group.css';
 
 const HARD_CODED = {
   vegetables: ['Broccoli', 'Spinach', 'Carrots', 'Kale'],
   fruits: ['Apples', 'Bananas', 'Berries', 'Oranges'],
-  wholegrains: ['Brown Rice', 'Quinoa', 'Oats', 'Whole Wheat Bread'],
+  grains: ['Brown Rice', 'Quinoa', 'Oats', 'Whole Wheat Bread'],
   proteins: ['Chicken', 'Beans', 'Tofu', 'Fish'],
   dairy: ['Yogurt', 'Milk', 'Cheese', 'Plant Milk'],
-  oils: ['Olive Oil', 'Nuts', 'Avocado', 'Seeds'],
 };
 
 export default function GroupPage() {
   const { groupId } = useParams();
+  const navigate = useNavigate();
   const { selected, addSelectedItem, removeSelectedItem } = useContext(GroceryContext);
   const baseList = HARD_CODED[groupId] || [];
   const [customItems, setCustomItems] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
-  function handleAddCustom() {
-    const val = window.prompt('Enter an item to add to this group:');
-    if (val && val.trim()) {
-      setCustomItems(prev => [...prev, val.trim()]);
-    }
+  function handleAddCustom(itemName) {
+    setCustomItems(prev => [...prev, itemName]);
+    setShowModal(false);
+  }
+
+  function handleOpenModal() {
+    setShowModal(true);
+  }
+
+  function handleCloseModal() {
+    setShowModal(false);
   }
 
   function toggleSelect(item) {
@@ -35,9 +44,9 @@ export default function GroupPage() {
 
   return (
     <section>
-      <p>
-        <Link to="/create">Back to groups</Link>
-      </p>
+      <nav className="group-nav">
+        <button className="back-btn" onClick={() => navigate('/create')}>Go back to plate</button>
+      </nav>
       <div className="group-list">
         <h2 style={{ textTransform: 'capitalize', marginTop: 0 }}>{groupId.replace(/([A-Z])/g, ' $1')}</h2>
         <ul className="group-items">
@@ -58,9 +67,15 @@ export default function GroupPage() {
           })}
         </ul>
         <div style={{ marginTop: '1rem', textAlign: 'right' }}>
-          <button onClick={handleAddCustom}>Add another item</button>
+          <button onClick={handleOpenModal}>Add another item +</button>
         </div>
       </div>
+
+      <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <button className="view-list-btn" onClick={() => navigate('/view')}>View your list</button>
+      </div>
+
+      <AddItem isOpen={showModal} onAdd={handleAddCustom} onClose={handleCloseModal} />
     </section>
   );
 }

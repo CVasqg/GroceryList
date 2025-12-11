@@ -1,0 +1,103 @@
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #FFA424;
+  border: 2px solid #A25701;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(162, 87, 1, 0.2);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content h3 {
+  color: #A25701;
+  font-family: 'Itim', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #A25701;
+  border-radius: 8px;
+  font-family: 'Itim', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.2s;
+}
+
+.modal-input:focus {
+  outline: 3px solid #ff7c9d;
+  border-color: #FFA424;
+  color: #A25701;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.modal-btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Itim', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-confirm {
+  background: #A25701;
+  color: #fff;
+  border: 2px solid #763f00;
+}
+
+.modal-confirm:hover {
+  background: #fff2af;
+  color: #A25701;
+  border: 2px solid #A25701;
+}
+
+.modal-cancel {
+  background: #A25701;
+  color: white;
+  border: 2px solid #763f00;
+}
+
+.modal-cancel:hover {
+  background: #B1CB1D;
+  color: #fff;
+  border: 2px solid #8b9f18;
+}

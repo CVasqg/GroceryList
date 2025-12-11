@@ -27,8 +27,15 @@ export default function About() {
 				</div>
 			</div>
 
-			<div className="about-block">
-				<div className="about-text">
+			<div className="about-block">				<div className="about-text">
+					<h2>How it Works</h2>
+					<p>
+						Select items from different food groups to build your own healthy grocery list. Our application organizes foods into key food groups based on nutritional science, helping you create meals that follow the Healthy Eating Plate and Pyramid guidelines. View your selections as a breakdown by food group to ensure balanced nutrition.
+					</p>
+				</div>
+			</div>
+
+			<div className="about-block">				<div className="about-text">
 					<h2>The Healthy Eating plate</h2>
 					<p>
 						The Healthy Eating Plate is a visual guide for creating balanced meals. It encourages the use of healthy oils, drinking mainly water, limiting sugary drinks, and keeping dairy intake moderate. The plate includes a reminder to stay physically active as part of maintaining overall health.

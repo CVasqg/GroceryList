@@ -13,7 +13,7 @@ export default function ViewList() {
 	return (
 		<section className="viewlist-page">
 			<nav className="viewlist-nav">
-				<button className="back-btn" onClick={() => navigate('/')}>Go back to plate</button>
+				<button className="back-btn" onClick={() => navigate('/create')}>Go back to plate</button>
 			</nav>
 			<div className="viewlist-content">
 				<div className="list-box">
