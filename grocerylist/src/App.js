@@ -27,8 +27,25 @@ function App() {
     });
   }
 
+  function increaseItemCount(groupId, item) {
+    setSelected(prev => {
+      const groupItems = prev[groupId] ? [...prev[groupId]] : [];
+      groupItems.push(item);
+      return { ...prev, [groupId]: groupItems };
+    });
+  }
+
+  function decreaseItemCount(groupId, item) {
+    setSelected(prev => {
+      const groupItems = prev[groupId] ? [...prev[groupId]] : [];
+      const idx = groupItems.indexOf(item);
+      if (idx !== -1) groupItems.splice(idx, 1);
+      return { ...prev, [groupId]: groupItems };
+    });
+  }
+
   return (
-    <GroceryContext.Provider value={{ selected, addSelectedItem, removeSelectedItem }}>
+    <GroceryContext.Provider value={{ selected, addSelectedItem, removeSelectedItem, increaseItemCount, decreaseItemCount }}>
       <BrowserRouter>
         <div className="App">
           <Navbar />

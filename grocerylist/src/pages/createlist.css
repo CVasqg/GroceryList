@@ -23,3 +23,8 @@
 .view-list-btn:active {
   transform: translateY(0);
 }
+
+h1 {
+  color: #A25701;
+  font-family: 'Itim', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
