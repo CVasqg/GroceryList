@@ -4,10 +4,11 @@
 
 **To run our application:**
 
-1. Open up your code editor of choice and clone the repo. Then, install all dependences for React:
+1. Open up your code editor of choice and clone the repo. Then, install all dependences:
    ```
    git clone [REPO_URL]
    npm install
+   npm install react-icons
    ```
 
 3. Run the application:
