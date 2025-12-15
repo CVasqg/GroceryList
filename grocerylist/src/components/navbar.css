@@ -37,3 +37,40 @@
 	background: rgba(255,255,255,0.12);
 	border-radius: 4px;
 }
+
+/* Mobile navbar formatting */
+@media (max-width: 768px) {
+	.gl-navbar {
+		padding: 0.5rem 0.75rem;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+	.gl-brand {
+		font-size: 1.3rem;
+	}
+	.gl-links {
+		gap: 0.5rem;
+	}
+	.gl-link {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.gl-navbar {
+		padding: 0.4rem 0.5rem;
+	}
+	.gl-brand {
+		font-size: 1.5rem;
+	}
+	.gl-links {
+		gap: 0.25rem;
+	}
+	.gl-link {
+		font-size: 1.4rem;
+		padding: 0.15rem 0.3rem;
+	}
+	.gl-logo img {
+		height: 36px;
+	}
+}

@@ -113,18 +113,59 @@
     flex-direction: column;
     align-items: stretch;
     text-align: center;
+    padding: 1rem 0.75rem;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
   }
 
   .hero-cta {
-    margin-top: 0.25rem;
+    margin-top: 0.75rem;
   }
+
+  .about-hero button {
+    width: 100%;
+    max-width: 200px;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    align-self: center;
+  }
+
   .about-block {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: stretch;
+    margin: 1.25rem 0;
+    padding: 0 0.5rem;
   }
+
+  .about-text {
+    flex: 1 1 auto;
+    margin-bottom: 1rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    text-align: left;
+    margin: 0.5rem 0;
+  }
+
   .about-media {
     max-width: 100%;
     flex: 1 1 auto;
+    margin-top: 0.5rem;
+  }
+
+  .about-media img {
+    width: 100%;
+    height: auto;
   }
 }
 
