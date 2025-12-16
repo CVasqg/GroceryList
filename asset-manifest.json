@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/GroceryList/static/css/main.e641dcae.css",
-    "main.js": "/GroceryList/static/js/main.376d1656.js",
+    "main.css": "/GroceryList/static/css/main.be8583ab.css",
+    "main.js": "/GroceryList/static/js/main.da7fa4e7.js",
     "static/js/453.98a89afe.chunk.js": "/GroceryList/static/js/453.98a89afe.chunk.js",
     "static/media/Inter-VariableFont_opsz,wght.ttf": "/GroceryList/static/media/Inter-VariableFont_opsz,wght.e05c5f3d1fa6a3893d84.ttf",
     "static/media/healthypyramid.svg": "/GroceryList/static/media/healthypyramid.b1314b9c729263395a2f6f8668c825a0.svg",
@@ -15,12 +15,12 @@
     "static/media/mango.png": "/GroceryList/static/media/mango.ba4b50f1c2efe72437de.png",
     "static/media/background.svg": "/GroceryList/static/media/background.fb50b31978a9cff1b7da.svg",
     "index.html": "/GroceryList/index.html",
-    "main.e641dcae.css.map": "/GroceryList/static/css/main.e641dcae.css.map",
-    "main.376d1656.js.map": "/GroceryList/static/js/main.376d1656.js.map",
+    "main.be8583ab.css.map": "/GroceryList/static/css/main.be8583ab.css.map",
+    "main.da7fa4e7.js.map": "/GroceryList/static/js/main.da7fa4e7.js.map",
     "453.98a89afe.chunk.js.map": "/GroceryList/static/js/453.98a89afe.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e641dcae.css",
-    "static/js/main.376d1656.js"
+    "static/css/main.be8583ab.css",
+    "static/js/main.da7fa4e7.js"
   ]
 }
