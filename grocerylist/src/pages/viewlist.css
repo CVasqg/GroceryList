@@ -118,13 +118,44 @@
 	flex-direction: row;
 }
 @media (max-width: 1024px) {
+	.viewlist-page {
+		padding: 0;
+		margin: 0;
+	}
+	
 	.viewlist-container {
-		padding: 0 1.5rem;
+		padding: 0.5rem;
 	}
 	
 	.viewlist-nav {
-		padding-left: 1rem;
-		padding-right: 1rem;
+		flex-direction: column;
+		gap: 0.75rem;
+		padding: 0.5rem;
+		margin-bottom: 0.5rem;
+		margin-top: 0;
+	}
+	
+	.viewlist-content {
+		flex-direction: column;
+	}
+	
+	.list-box {
+		max-width: 280px;
+		min-width: auto;
+		width: 280px;
+		margin: 0 auto;
+		padding: 1rem;
+	}
+	
+	.diagram-section {
+		width: 100%;
+		margin: 0;
+		text-align: left;
+	}
+	
+	.diagram-section svg {
+		max-width: 100%;
+		height: auto;
 	}
 }
 
