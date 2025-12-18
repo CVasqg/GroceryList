@@ -44,8 +44,12 @@ function App() {
     });
   }
 
+  function resetSelected() {
+    setSelected({});
+  }
+
   return (
-    <GroceryContext.Provider value={{ selected, addSelectedItem, removeSelectedItem, increaseItemCount, decreaseItemCount }}>
+    <GroceryContext.Provider value={{ selected, addSelectedItem, removeSelectedItem, increaseItemCount, decreaseItemCount, resetSelected }}>
       <BrowserRouter>
         <div className="App">
           <Navbar />

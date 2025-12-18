@@ -36,9 +36,12 @@ export default function About() {
 			</div>
 
 			<div className="about-block">				<div className="about-text">
-					<h2>The Healthy Eating plate</h2>
+					<h2>The Healthy Eating Plate</h2>
 					<p>
-						The Healthy Eating Plate is a visual guide for creating balanced meals. It encourages the use of healthy oils, drinking mainly water, limiting sugary drinks, and keeping dairy intake moderate. The plate includes a reminder to stay physically active as part of maintaining overall health.
+						The Healthy Eating Plate, developed by nutrition experts at Harvard T.H. Chan School of Public Health, is a visual guide for creating balanced meals.
+					</p>
+					<p>
+						It recommends filling 50% of your plate with vegetables and fruits, 25% with whole grains like brown rice, quinoa, oats, and whole wheat, and 25% with protein such as fish, poultry, beans, nuts, and eggs (limiting red meat). Dairy intake should be kept moderate at 1-2 servings per day. The plate also emphasizes staying physically active, drinking water as your main beverage, and using healthy oils like olive oil.
 					</p>
 				</div>
 				<div className="about-media">
