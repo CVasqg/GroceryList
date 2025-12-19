@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { GroceryContext } from '../App';
 import { useNavigate } from 'react-router-dom';
 import './viewlist.css';
-import PlateDiagram from './createlist.jsx';
 import { FaTrashAlt } from 'react-icons/fa';
 
 // Copy of PlateDiagram for view list (non-interactive)
