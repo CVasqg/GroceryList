@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/GroceryList/static/css/main.b41ca21f.css",
-    "main.js": "/GroceryList/static/js/main.f1156e0d.js",
+    "main.js": "/GroceryList/static/js/main.d44a2e48.js",
     "static/js/453.98a89afe.chunk.js": "/GroceryList/static/js/453.98a89afe.chunk.js",
     "static/media/Inter-VariableFont_opsz,wght.ttf": "/GroceryList/static/media/Inter-VariableFont_opsz,wght.e05c5f3d1fa6a3893d84.ttf",
     "static/media/healthypyramid.svg": "/GroceryList/static/media/healthypyramid.b1314b9c729263395a2f6f8668c825a0.svg",
@@ -16,11 +16,11 @@
     "static/media/background.svg": "/GroceryList/static/media/background.fb50b31978a9cff1b7da.svg",
     "index.html": "/GroceryList/index.html",
     "main.b41ca21f.css.map": "/GroceryList/static/css/main.b41ca21f.css.map",
-    "main.f1156e0d.js.map": "/GroceryList/static/js/main.f1156e0d.js.map",
+    "main.d44a2e48.js.map": "/GroceryList/static/js/main.d44a2e48.js.map",
     "453.98a89afe.chunk.js.map": "/GroceryList/static/js/453.98a89afe.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b41ca21f.css",
-    "static/js/main.f1156e0d.js"
+    "static/js/main.d44a2e48.js"
   ]
 }
