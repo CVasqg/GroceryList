@@ -16,7 +16,7 @@ const HARD_CODED = {
 export default function GroupPage() {
   const { groupId } = useParams();
   const navigate = useNavigate();
-  const { selected, addSelectedItem, removeSelectedItem } = useContext(GroceryContext);
+  const { selected, addSelectedItem, removeSelectedItem, resetSelected } = useContext(GroceryContext);
   const baseList = HARD_CODED[groupId] || [];
   const [customItems, setCustomItems] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -43,9 +43,13 @@ export default function GroupPage() {
   const combined = [...baseList, ...customItems];
 
   return (
-    <section>
+    <section className="group-page">
       <nav className="group-nav">
         <button className="back-btn" onClick={() => navigate('/create')}>Go back to plate</button>
+        <button className="start-new-btn" onClick={() => {
+          resetSelected();
+          navigate('/create');
+        }}>Start New List</button>
       </nav>
       <div className="group-list">
         <h2 style={{ textTransform: 'capitalize', marginTop: 0 }}>{groupId.replace(/([A-Z])/g, ' $1')}</h2>

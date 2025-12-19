@@ -24,7 +24,164 @@
   transform: translateY(0);
 }
 
+.createlist-page {
+  position: relative;
+}
+
+.createlist-container {
+  padding: 0 2rem;
+}
+
+.recommendations-box {
+  flex: 0 0 280px;
+  background: #fff2af;
+  border: 2px solid #A25701;
+  border-radius: 16px;
+  padding: 1.5rem;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+  margin-top: 100px;
+}
+
+.recommendations-box h3 {
+  color: #A25701;
+  font-family: 'Itim', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1.3rem;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.recommendations-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.recommendations-list li {
+  color: #A25701;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.recommendations-list strong {
+  color: #763f00;
+}
+
+.recommendations-source {
+  font-size: 0.85rem;
+  color: #763f00;
+  text-align: center;
+  margin: 0;
+  font-style: italic;
+}
+
+.createlist-main {
+  flex: 1;
+}
+
+.createlist-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.createlist-header {
+  text-align: center;
+  flex: 1;
+  margin-left: 150px;
+}
+
+.start-new-btn {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .createlist-page {
+    padding-top: 1rem;
+  }
+  
+  .createlist-container {
+    flex-direction: column-reverse;
+    padding: 0 0.5rem;
+  }
+  
+  .recommendations-box {
+    position: static;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    flex: none;
+    width: auto;
+    max-width: 70%;
+    padding: 1rem;
+  }
+  
+  .createlist-nav {
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .createlist-header {
+    margin-left: 0;
+  }
+  
+  .createlist-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .createlist-subheader {
+    font-size: 0.9rem;
+  }
+}
+
+.page-header {
+  position: relative;
+}
+
 h1 {
   color: #A25701;
   font-family: 'Itim', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.createlist-subheader {
+  color: #A25701;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0 0;
+  font-weight: 400;
+}
+
+.start-new-btn {
+  background: #B1CB1D;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  padding: 0.7rem 1.5rem;
+  font-family: 'Itim', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.start-new-btn:hover {
+  background: #A25701;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.start-new-btn:active {
+  transform: translateY(0);
 }

@@ -53,7 +53,7 @@ function PlateDiagramStatic({ percentages }) {
 }
 
 export default function ViewList() {
-	const { selected, increaseItemCount, decreaseItemCount, removeSelectedItem } = useContext(GroceryContext);
+	const { selected, increaseItemCount, decreaseItemCount, removeSelectedItem, resetSelected } = useContext(GroceryContext);
 	const navigate = useNavigate();
 	const groups = Object.keys(selected || {});
 	const totalCount = groups.reduce((sum, g) => sum + (selected[g] ? selected[g].length : 0), 0) || 0;
@@ -79,10 +79,17 @@ export default function ViewList() {
 
 	return (
 		<section className="viewlist-page">
-			<nav className="viewlist-nav">
-				<button className="back-btn" onClick={() => navigate('/create')}>Go back to plate</button>
-			</nav>
-			<div className="viewlist-content">
+			<div className="viewlist-container">
+	
+				<div className="viewlist-main">
+					<nav className="viewlist-nav">
+						<button className="back-btn" onClick={() => navigate('/create')}>Go back to plate</button>
+						<button className="start-new-btn" onClick={() => {
+							resetSelected();
+							navigate('/create');
+						}}>Start New List</button>
+					</nav>
+					<div className="viewlist-content">
 				<div className="list-box">
 					<h2 className="list-title">Your List</h2>
 					{totalCount === 0 ? (
@@ -112,7 +119,9 @@ export default function ViewList() {
 						<PlateDiagramStatic percentages={percentages} />
 					</div>
 				</div>
+				</div>
 			</div>
+		</div>
 		</section>
 	);
 }

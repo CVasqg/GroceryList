@@ -3,14 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { GroceryContext } from '../App';
 import './createlist.css';
 
-const GROUPS = [
-	{ id: 'vegetables', name: 'Vegetables' },
-	{ id: 'fruits', name: 'Fruits' },
-	{ id: 'grains', name: 'Grains' },
-	{ id: 'proteins', name: 'Proteins' },
-	{ id: 'dairy', name: 'Dairy' },
-];
-
 function PlateDiagram({ onSelect, percentages, disableClicks }) {
 	// Colors for each category
 	const colors = {
@@ -74,7 +66,7 @@ function PlateDiagram({ onSelect, percentages, disableClicks }) {
 
 export default function CreateList() {
 	const navigate = useNavigate();
-	const { selected } = useContext(GroceryContext);
+	const { selected, resetSelected } = useContext(GroceryContext);
 	const hasItems = Object.values(selected).some(items => items && items.length > 0);
 
 	// Calculate percentages for each group
@@ -94,14 +86,28 @@ export default function CreateList() {
 	}
 
 	return (
-		<section>
-			<h1>Create Your List</h1>
-			<PlateDiagram onSelect={handleSelect} percentages={percentages} />
-			{hasItems && (
-				<div style={{ marginTop: '2rem', textAlign: 'center' }}>
-					<button className="view-list-btn" onClick={() => navigate('/view')}>View your list</button>
+		<section className="createlist-page">
+			<div className="createlist-container">
+
+				<div className="createlist-main">
+					<nav className="createlist-nav">
+						<div className="createlist-header">
+							<h1>Create Your List</h1>
+							<p className="createlist-subheader">Choose your food category</p>
+						</div>
+						<button className="start-new-btn" onClick={() => {
+						resetSelected();
+						navigate('/create');
+					}}>Start New List</button>
+					</nav>
+					<PlateDiagram onSelect={handleSelect} percentages={percentages} />
+					{hasItems && (
+						<div style={{ marginTop: '2rem', textAlign: 'center' }}>
+							<button className="view-list-btn" onClick={() => navigate('/view')}>View your list</button>
+						</div>
+					)}
 				</div>
-			)}
+			</div>
 		</section>
 	);
 }
